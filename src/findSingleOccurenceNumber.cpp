@@ -16,6 +16,19 @@ complexity .
 */
 #define NULL 0
 int findSingleOccurenceNumber(int *A, int len) {
-	if(A==NULL)
+	if(A==NULL||len<1)
 		return -1;
+	else
+	{
+		int a[65535] = { 0 },i;
+		for (i = 0; i < len; i++){
+			a[*(A + i)] += 1;
+		}
+
+		for (i = 0; i < len; i++)
+		{
+			if (a[*(A + i)] < 3)
+				return *(A + i);
+		}
+	}
 }

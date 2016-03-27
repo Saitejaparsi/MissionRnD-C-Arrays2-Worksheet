@@ -30,7 +30,7 @@ struct transaction * sortedArraysCommonElements(struct transaction *A, int ALen,
 	else
 	{
 		int i, j, a,count=0;
-		s **b=NULL;
+		s **b = NULL;
 		b = (s **)malloc(sizeof(s));
 		for (i = 0; i < ALen; i++)
 		{
